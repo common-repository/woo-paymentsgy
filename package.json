@@ -1,0 +1,18 @@
+{
+  "name": "paymentsgy-plugin",
+  "version": "1.0.0",
+  "description": "Payments.GY is an online payment system designed and developed by [IntellectStorm Inc](http://intellectstorm.com) in partnership with GTT Mobile Money with the aim of moving Guyana a step closer to becoming a cashless society. This plugin is an extension of that system, allowing Guyanese businesses to accept payments directly on their WooCommerce website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:intellectstorm/paymentsgy/paymentsgy-plugin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mockyeah": "^0.20.2"
+  }
+}

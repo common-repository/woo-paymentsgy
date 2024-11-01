@@ -1,0 +1,16 @@
+stages:
+- deploy
+
+deploy:
+  stage: deploy
+
+  script:
+    - svn co https://plugins.svn.wordpress.org/woo-paymentsgy/ plugin
+    - cp --parents $(git ls-tree -r HEAD --name-only) plugin/trunk
+    - cd plugin
+    - svn cp trunk tags/$CI_COMMIT_REF_NAME
+    - svn add --force trunk
+    - svn commit --username=$plugin_repository_username --password=$plugin_repository_password -m "$CI_COMMIT_MESSAGE"
+  
+  only:
+    - tags
